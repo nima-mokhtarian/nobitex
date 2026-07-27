@@ -1,8 +1,32 @@
 # Nobitex API Postman Collection
 
+[![Postman v2.1](https://img.shields.io/badge/Postman-collection%20v2.1-FF6C37)](https://www.postman.com/)
+![Requests](https://img.shields.io/badge/requests-56-0A66C2)
+![Examples](https://img.shields.io/badge/saved%20examples-121-6f42c1)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 This repository contains a comprehensive Postman collection for interacting with the [Nobitex API](https://apidocs.nobitex.ir), 
 the leading cryptocurrency exchange API in Iran. The collection includes requests for major endpoints, organized by category, 
 to help you quickly explore and integrate Nobitex's API into your projects.
+
+## At a Glance
+
+| Item | Included |
+|---|---|
+| Configured requests | 56 |
+| Saved response examples | 121 |
+| Top-level folders | 11 |
+| Coverage | Markets, authentication, users, wallets, spot/commitment trading, withdrawals, referrals, and security |
+| Authentication | Environment-based `Authorization: Token` header |
+
+```mermaid
+flowchart LR
+    E["Nobitex environment"] --> P["Public market requests"]
+    E --> T["Token-authenticated requests"]
+    P --> API["Nobitex API"]
+    T --> API
+    API --> X["Saved response examples"]
+```
 
 ## Table of Contents
 - [Overview](#overview)
@@ -81,6 +105,16 @@ The Postman collection is organized into these top-level folders:
 - **Security**: Anti-Phishing and account security endpoints
 
 For detailed endpoint descriptions, refer to the [Nobitex API Documentation](https://apidocs.nobitex.ir).
+
+## Project Status
+
+The collection, environment, and 121 saved examples validate successfully as
+JSON. Credential fields ship empty. Trading, withdrawal, and account-security
+requests can change real assets or account state; review every parameter and
+use a least-privilege token.
+
+This repository is part of the
+[Crypto API Postman toolkit](https://github.com/nima-mokhtarian?tab=repositories).
 
 ## Contributing
 Contributions are welcome! To contribute:
